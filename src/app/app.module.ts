@@ -5,12 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { CreatePostsComponent } from './components/create-posts/create-posts.component';
+import { ReplyComponent } from './components/reply/reply.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { PostComponent } from './components/post/post.component';
+import { LoginComponent } from './components/login/login.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostsComponent,
-    CreatePostsComponent
+    CreatePostsComponent,
+    ReplyComponent,
+    NavbarComponent,
+    PostComponent,
+    LoginComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
