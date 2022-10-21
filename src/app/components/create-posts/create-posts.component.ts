@@ -29,7 +29,7 @@ export class CreatePostsComponent implements OnInit {
     const thread: Thread = {thread_id: 0,
       account_id:this.registerForm.controls['account_id'].value,
       title:this.registerForm.controls['title'].value,
-      content:this.registerForm.controls['comment'].value,
+      content:this.registerForm.controls['content'].value,
       epoch:0,
       updoot: 0};
       this.createPost(thread);

@@ -3,9 +3,9 @@
     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
 
 
-        <input id="account" formControlName="account" class="form-control" placeholder="0 = anon"/>
+        <input id="account" formControlName="account_id" class="form-control" placeholder="0 = anon"/>
         <input id="title" formControlName="title" class="form-control" placeholder="title"/>
-        <input id="comment" formControlName="comment" class="form-control" placeholder="comment"/>
+        <input id="comment" formControlName="content" class="form-control" placeholder="comment"/>
         
         <button id="submit">Submit</button>
         
