@@ -26,8 +26,8 @@ export class CreatePostsComponent implements OnInit {
 
   
   async onSubmit(){
-    const thread: Thread = {thread_id: 0,
-      account_id:this.registerForm.controls['account_id'].value,
+    const thread: Thread = {threadId: 0,
+      accountId:this.registerForm.controls['account_id'].value,
       title:this.registerForm.controls['title'].value,
       content:this.registerForm.controls['content'].value,
       epoch:0,
