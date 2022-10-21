@@ -14,19 +14,17 @@ export class CreatePostsComponent implements OnInit {
   constructor(private postService: PostService, private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+    this.registerForm = this.formBuilder.group({
+      account_id: [''],
+      title: [''],
+      content: [''],
+    });
   }
 
   registerForm!: FormGroup;
   submitted = false;
 
-  /*
-        public thread_id: number,
-        public account_id: number,
-        public title: string,
-        public content: string,
-        public epoch: number,
-        public updoot: number
-  */
+  
   async onSubmit(){
     const thread: Thread = {thread_id: 0,
       account_id:this.registerForm.controls['account_id'].value,

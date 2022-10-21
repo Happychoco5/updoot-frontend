@@ -1,8 +1,8 @@
 export const environment = {
   production: true,
-  baseUrl: "find me in src/enviorment",
+  baseUrl: "http://localhost:8080",
   threadUrl: "find mme",
   headers: {
-    
+    'Content-Type': 'application/json'
   }
 };
