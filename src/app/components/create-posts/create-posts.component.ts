@@ -38,7 +38,8 @@ export class CreatePostsComponent implements OnInit {
 
   createPost(thread: Thread)
   {
-    //this.postService.makeSingleThread(thread);
+    console.log(thread);
+    this.postService.makeSingleThread(thread);
   }
 
 }
