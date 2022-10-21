@@ -1,0 +1,16 @@
+mat-card{
+    background-color: #fff;
+    color: black;
+}
+
+@supports (display: grid){
+    .post-card{
+        width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(3, max(250px, 250px));
+    column-gap: 60px;
+    row-gap: 50px;
+    }
+}
