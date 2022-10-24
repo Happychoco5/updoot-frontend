@@ -11,6 +11,7 @@ import { ReplyService } from 'src/app/services/reply/reply.service';
 export class ReplyComponent implements OnInit {
   @Input() postId!: number;
   replies: Reply[] = [];
+  replyContent: string = "";
 
   constructor(private replyService: ReplyService) {}
 
@@ -32,14 +33,20 @@ export class ReplyComponent implements OnInit {
   }
 
   createReplyForPost(){
-    const reply= new Reply(0, 1, 1, "...", 0, 0);
+    const reply= new Reply(0, this.postId, 1, this.replyContent, this.getTimestampInSeconds(), 0);
     this.replyService.registerPostReply(reply).subscribe(
-      (res) => {
-        console.log(res);
+      {next: (reply) => {
+        this.getRepliesByPost(this.postId);
+        this.replyContent = "";
       }, 
-      (err) => {
+      error: (err) => {
         console.log(err);
       }
-    );
+    });
   }
+
+  getTimestampInSeconds () {
+    return Math.floor(new Date().getTime()/1000.0);
+  }
+
 }
