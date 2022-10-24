@@ -10,9 +10,11 @@ import { environment } from 'src/environments/environment';
 export class LoginService {
 
   constructor(private http: HttpClient) { }
+
   
   login(username: string, password: string): Observable<Account> {
     const payload = {username: username, password:password};
     return this.http.post<Account>(`${environment.baseUrl}/login`, payload, { headers: environment.headers }) 
+
   }
 }
