@@ -3,6 +3,9 @@ import { Router } from '@angular/router';
 
 import { LoginService } from 'src/app/services/login/login.service';
 import { FormBuilder, FormGroup } from '@angular/forms'
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
+import { Account } from 'src/app/models/account/account';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +14,7 @@ import { FormBuilder, FormGroup } from '@angular/forms'
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private loginService: LoginService, private router: Router, private formBuilder: FormBuilder) { }
+  constructor(private loginService: LoginService, private router: Router, private formBuilder: FormBuilder, private http: HttpClient) { }
   username:string = "";
   password:string = "";
 
@@ -26,8 +29,14 @@ export class LoginComponent implements OnInit {
   submitted = false;
 
 
-  onSubmit(): void {
-    this.loginService.login(this.username, this.password);
-    this.router.navigateByUrl("/home");
+  async onSubmit() {
+   
+    this.loginService.login(this.registerForm.controls["username"].value, this.registerForm.controls["password"].value).subscribe(
+      (account) => {localStorage.setItem("userInfo", JSON.stringify(account))}, 
+      (error)=> {console.log("An error has occured")}
+    )
+
+    
   }
-}
+  }
+
