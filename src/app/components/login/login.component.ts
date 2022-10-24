@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
 
 
   onSubmit(): void {
-    this.loginService.login(this.username, this.password);
+    const observable = this.loginService.login(this.username, this.password);
     this.router.navigateByUrl("/home");
   }
 }

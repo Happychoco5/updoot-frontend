@@ -10,8 +10,8 @@ export class LoginService {
 
   constructor(private http: HttpClient) { }
 
-  login(username: string, password: string): Observable<any> {
+  login(username: string, password: string): void {
     const payload = {username: username, password:password};
-    return this.http.post(`${environment.baseUrl}/login`, payload, { headers: environment.headers }) 
+    this.http.post(`${environment.baseUrl}/login`, payload, { headers: environment.headers }); 
   }
 }
