@@ -1,36 +1,38 @@
 <p>hello human</p>
-
-<mat-accordion>
-    <mat-expansion-panel>
-        <mat-expansion-panel-header>
-            <mat-panel-title>
-                Create a post
-            </mat-panel-title>
-        </mat-expansion-panel-header>
-        <div class="form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-            <ul>
-                <li>
-                    <mat-form-field appearance="fill">
-                        <mat-label>user ID:</mat-label>
-                        <input matInput id="account" formControlName="account_id" class="form-control" placeholder="0 = anon">
-                    </mat-form-field>
-                </li>
-                <li>
-                    <mat-form-field appearance="fill">
-                        <mat-label>Title</mat-label>
-                        <input matInput id="title" formControlName="title" class="form-control" placeholder="title">
-                    </mat-form-field>
-                </li>
-                <li>
-                    <mat-form-field appearance="fill">
-                        <mat-label>Comment</mat-label>
-                        <input matInput id="comment" formControlName="content" class="form-control" placeholder="comment">
-                    </mat-form-field>
-                </li>
-                <li>
-                    <button mat-button (click)="onSubmit()">submit</button>
-                </li>
-            </ul>
-            </div>
-    </mat-expansion-panel>
-</mat-accordion>
+<div class="margintop">
+    <mat-accordion>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Create a post
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <ul>
+                    <li>
+                        <mat-form-field appearance="fill">
+                            <mat-label>user ID:</mat-label>
+                            <input matInput id="account" formControlName="account_id" class="form-control" placeholder="0 = anon">
+                        </mat-form-field>
+                    </li>
+                    <li>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Title</mat-label>
+                            <input matInput id="title" formControlName="title" class="form-control" placeholder="title">
+                        </mat-form-field>
+                    </li>
+                    <li>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Comment</mat-label>
+                            <input matInput id="comment" formControlName="content" class="form-control" placeholder="comment">
+                        </mat-form-field>
+                    </li>
+                    <li>
+                        <button mat-button (click)="onSubmit()">submit</button>
+                    </li>
+                </ul>
+                </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+    
+</div>
