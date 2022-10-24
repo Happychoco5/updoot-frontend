@@ -1,0 +1,12 @@
+*{
+    margin-top: 5%;
+}
+
+div{
+    width: 100%;
+}
+form{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
