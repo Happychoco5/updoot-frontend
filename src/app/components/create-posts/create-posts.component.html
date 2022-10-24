@@ -7,7 +7,7 @@
                 Create a post
             </mat-panel-title>
         </mat-expansion-panel-header>
-        <div class="form" [formGroup]="registerForm">
+        <div class="form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
             <ul>
                 <li>
                     <mat-form-field appearance="fill">

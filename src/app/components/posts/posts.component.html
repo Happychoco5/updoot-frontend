@@ -1,0 +1,26 @@
+<<<<<<< HEAD
+=======
+<div class="post-card">
+<mat-card *ngFor="let p of threads">
+    <mat-card-header>
+        <mat-card-title>{{p.title}}</mat-card-title>
+        <mat-card-subtitle>Date: {{p.epoch*1000 | date : 'short'}}</mat-card-subtitle>
+    </mat-card-header>
+        <mat-card-content>
+                <p>{{p.content}}</p>
+                <footer> {{p.updoot}}</footer>
+        </mat-card-content>
+        <mat-card-footer> 
+
+        
+        <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+            <mat-icon>favorite</mat-icon>
+          </button>
+        </mat-card-footer>
+</mat-card>
+</div>
+    
+
+ 
+
+>>>>>>> 632f4eb1959d00b75ff1de2d00227399ef51c191
