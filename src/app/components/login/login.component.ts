@@ -33,8 +33,10 @@ export class LoginComponent implements OnInit {
   async onSubmit() {
    
     this.loginService.login(this.registerForm.controls["username"].value, this.registerForm.controls["password"].value).subscribe(
-      (account) => {localStorage.setItem("userInfo", JSON.stringify(account))}, 
-      (error)=> {console.log("An error has occured")}
+      (account) => {localStorage.setItem("userInfo", JSON.stringify(account))
+    this.router.navigateByUrl("/home")
+    }, 
+      (error)=> {console.log("An error has occured"), JSON.stringify(error)}
     )
 
     
