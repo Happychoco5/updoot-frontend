@@ -26,7 +26,8 @@ export class PostService {
   
 
   public makeSingleThread(thread: Thread): Observable<Thread> {
-    return this.http.post<Thread>(environment.baseUrl + this.threadUrl + `${thread}`, { headers: environment.headers});
+    const payload = JSON.stringify(thread);
+    return this.http.post<Thread>(environment.baseUrl + this.threadUrl, payload, { headers: environment.headers});
   }
 
   public getThreadsByUser(username: string): Observable<Thread[]> {
