@@ -1,3 +1,10 @@
+
+<div>
+    <textarea [(ngModel)]="replyContent">
+
+    </textarea>
+    <button (click)="createReplyForPost()">Add Comment</button>
+</div>
 <div *ngFor="let reply of replies">
-    <p>{{reply.content}}</p>
+    <p>content: {{reply.content}} updoot: {{reply.updoot}} date: {{ reply.epoch * 1000 | date:'medium' }}</p>
 </div>
