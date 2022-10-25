@@ -30,7 +30,7 @@ export class CreatePostsComponent implements OnInit {
       accountId:this.registerForm.controls['account_id'].value,
       title:this.registerForm.controls['title'].value,
       content:this.registerForm.controls['content'].value,
-      epoch:0,
+      epoch:Date.now()/1000,
       updoot: 0};
       this.createPost(thread);
   }
@@ -39,7 +39,14 @@ export class CreatePostsComponent implements OnInit {
   createPost(thread: Thread)
   {
     console.log(thread);
-    this.postService.makeSingleThread(thread);
+    this.postService.makeSingleThread(thread).subscribe(
+      (thread)=>{
+        console.log("Success");
+      },
+      (error)=>{
+        console.log("Something went wrong");
+      }
+    );
   }
 
 }

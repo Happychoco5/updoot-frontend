@@ -13,7 +13,6 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
-
 import {MatTableModule} from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -41,6 +40,7 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     MatTableModule,
     BrowserAnimationsModule,
     MatSelectModule,
@@ -49,11 +49,9 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     MatButtonModule,
     MatInputModule,
     MatIconModule,
-    MatSlideToggleModule
-,
-    FormsModule,
+    MatSlideToggleModule,
     ReactiveFormsModule,
-    HttpClientModule
+
     
 
   ],

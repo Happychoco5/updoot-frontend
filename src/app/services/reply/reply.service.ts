@@ -4,7 +4,6 @@ import { Reply } from 'src/app/models/reply/reply';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -22,4 +21,5 @@ export class ReplyService {
   getRepliesForPost(id: number): Observable<Reply[]> {
     return this.http.get<Reply[]>(`${environment.baseUrl}${this.replyUrl}/${id}`);
   }
+
 }
