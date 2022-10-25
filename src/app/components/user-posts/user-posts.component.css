@@ -10,9 +10,13 @@ h3 {
     text-align: center;
 }
 
-mat-card {
-    background-color: #fff;
-    color: black;
+mat-card{
+    background-color: var(--card-bkg-color);
+    color: var(--text-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+mat-card-subtitle{
+    color: var(--text-color);
 }
 
 .mat-card:hover {
@@ -26,7 +30,7 @@ mat-card {
         margin-left: auto;
         margin-right: auto;
         display: grid;
-        grid-template-columns: repeat(3, max(250px, 250px));
+        grid-template-columns: repeat(1, max(250px, 250px));
         column-gap: 60px;
         row-gap: 50px;
     }
