@@ -29,9 +29,6 @@ export class ReplyComponent implements OnInit {
       {
         next: (replies) => {
         this.replies = replies;
-        for(let reply of this.replies){
-          this.checkForUpdoot(reply.replyId);
-        }
         },
         error: (err) => {
         console.log(err)
