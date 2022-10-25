@@ -1,0 +1,27 @@
+<div *ngIf="this.threads.length > 0; then userPosts else noPosts"></div>
+
+<ng-template #noPosts>
+    <h2 class="center">{{this.user}}'s posts</h2>
+    <h3 class="center">You haven't made a post yet. <a [routerLink]="['/create-posts']"> Create a new Post</a></h3>
+</ng-template>
+
+<ng-template #userPosts>
+    <h2 class="center">{{this.user}}'s posts</h2>
+    <div class="post-card">
+        <mat-card *ngFor="let p of threads" (click)="navigateToThread(p)">
+            <mat-card-header>
+                <mat-card-title>{{p.title}}</mat-card-title>
+                <mat-card-subtitle>{{p.epoch * 1000 | date: 'short'}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <p>{{p.content | truncate: 50}}</p>
+                <footer> {{p.updoot}}</footer>
+            </mat-card-content>
+            <mat-card-footer>
+                <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+                    <mat-icon>favorite</mat-icon>
+                </button>
+            </mat-card-footer>
+        </mat-card>
+    </div>
+</ng-template>

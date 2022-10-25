@@ -1,0 +1,33 @@
+* {
+    margin-top: 5%;
+}
+
+h3 {
+    margin-top: 0%;
+}
+
+.center {
+    text-align: center;
+}
+
+mat-card {
+    background-color: #fff;
+    color: black;
+}
+
+.mat-card:hover {
+    box-shadow: 0 5px 10px rgb(76, 76, 76);
+    transform: translate3d(0, -10px, 0);
+}
+
+@supports (display: grid) {
+    .post-card {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns: repeat(3, max(250px, 250px));
+        column-gap: 60px;
+        row-gap: 50px;
+    }
+}
