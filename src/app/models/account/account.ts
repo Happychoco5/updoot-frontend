@@ -1,7 +1,7 @@
 export class Account {
     
     constructor(
-        public accountId: number,
+        public account_id: number,
         public username: string,
         public password: string
     ){}
