@@ -1,10 +1,10 @@
-*{
-    margin-top: 5%;
-}
-
 mat-card{
-    background-color: #fff;
-    color: black;
+    background-color: var(--card-bkg-color);
+    color: var(--text-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+mat-card-subtitle{
+    color: var(--text-color);
 }
 
 @supports (display: grid){
