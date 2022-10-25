@@ -1,4 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
 
+body{
+    --text-color: black;
+    --bkg-color:white;
+    --btn-txt-color:white;
+    --btn-bkg-color:grey;
+    --card-bkg-color:white;
+}
+body.dark-theme {
+    --text-color: white;
+    --bkg-color:#252222;
+    --btn-txt-color:white;
+    --btn-bkg-color:grey;
+    --card-bkg-color:black;
+}
+html{
+    margin-top: 5%;
+}
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body{
+    background: var(--bkg-color);
+    color: var(--text-color);
+}
+
+mat-button{
+    background: var(--btn-bkg-color);
+    color: var(--btn-txt-color);
+}
+button{
+    background: var(--btn-bkg-color);
+    color: var(--btn-txt-color);
+}
