@@ -1,8 +1,8 @@
 export class Reply {
     constructor(
-        public reply_id: number,
-        public thread_id: number,
-        public account_id: number,
+        public replyId: number,
+        public threadId: number,
+        public accountId: number,
         public content: string,
         public epoch: number,
         public updoot: number
