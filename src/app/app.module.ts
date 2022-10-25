@@ -23,6 +23,8 @@ import { MatButtonModule } from "@angular/material/button";
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import { ReplyCardComponent } from './components/reply-card/reply-card.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,12 @@ import { ReplyCardComponent } from './components/reply-card/reply-card.component
     MatCardModule,
     MatButtonModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    MatExpansionModule,
+    FormsModule,
+    MatSlideToggleModule,
+    ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
