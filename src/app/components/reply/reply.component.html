@@ -6,6 +6,7 @@
     <button (click)="createReplyForPost()">Add Comment</button>
 </div>
 <div *ngFor="let reply of replies">
+    <app-reply-card></app-reply-card>
     <p>content: {{reply.content}} updoot: {{reply.updoot}} date: {{ reply.epoch * 1000 | date:'medium' }}</p>
-    <button [disabled] = "checkForUpdoot(reply.replyId)" (click)="updootReply(reply)">Updoot</button>
+    <button (click)="updootReply(reply)">Updoot</button>
 </div>
