@@ -53,25 +53,6 @@ export class ReplyComponent implements OnInit {
     return Math.floor(new Date().getTime()/1000.0);
   }
 
-  updootReply(reply: Reply){
-    const updootedReply = new UpdootedReply(0, 1, reply.replyId);
-    this.updootService.postUpdootReply(updootedReply).subscribe(
-      {next: (res) => {
-        this.updootService.updootReply(reply.replyId).subscribe({
-          next: (res2) => {
-            reply.updoot = res2;
-          },
-          error: (err2) => {
-            console.log(err2);
-          }
-        });
-      },
-      error: (err) => {
-        console.log(err);
-      }
-    });
-  }
-
   checkForUpdoot(replyId: number){
     this.updootService.getUpdootedReply(1, replyId).subscribe({
       next: (res) => {
