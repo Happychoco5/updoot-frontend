@@ -1,20 +1,24 @@
 div{
     width: 100%;
-    margin-top: 5%;
+    text-align: center;
 }
-
 ul{
     list-style: none;
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
 }
-.margintop{
-    margin-top: 5%;
-}
+
 
 form{
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
+}
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+    background: var(--card-bkg-color);
+    color: var(--text-color);
+}
+::placeholder, mat-label{
+    color: var(--text-color);
 }
