@@ -3,7 +3,7 @@
 <input id="toggle-menu" type="checkbox" />
 <label for="toggle-menu" class="menu-on">Menu</label>
 <label for="toggle-menu" class="menu-off"></label>
-<div *ngIf="loggedIn">
+<div *ngIf="this.loginService.loggedIn">
 <nav>
     <ul>
         <li><a mat-button [routerLink]="['/home']">Home</a></li>

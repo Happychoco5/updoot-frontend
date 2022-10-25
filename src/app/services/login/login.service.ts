@@ -10,6 +10,7 @@ import { environment } from 'src/environments/environment';
 export class LoginService {
 
   constructor(private http: HttpClient) { }
+  loggedIn: boolean = false;
 
   
   login(username: string, password: string): Observable<Account> {
