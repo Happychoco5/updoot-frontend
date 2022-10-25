@@ -13,7 +13,6 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
-
 import {MatTableModule} from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -24,6 +23,7 @@ import { MatButtonModule } from "@angular/material/button";
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [
@@ -41,6 +41,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     MatTableModule,
     BrowserAnimationsModule,
     MatSelectModule,
@@ -49,12 +50,10 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatButtonModule,
     MatInputModule,
     MatIconModule,
-    MatExpansionModule
-,
+    MatExpansionModule,
     FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule
-    
+    MatSlideToggleModule,
+    ReactiveFormsModule
 
   ],
   providers: [],
