@@ -25,6 +25,8 @@ import {MatIconModule} from '@angular/material/icon';
 import { ReplyCardComponent } from './components/reply-card/reply-card.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { UserPostsComponent } from './components/user-posts/user-posts.component';
+import { TruncatePipe } from './pipes/truncate.pipe';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     PostComponent,
     LoginComponent,
     HomePageComponent,
-    ReplyCardComponent
+    ReplyCardComponent,
+    UserPostsComponent,
+    TruncatePipe
   ],
   imports: [
     BrowserModule,
