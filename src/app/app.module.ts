@@ -22,6 +22,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from "@angular/material/button";
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
+import { ReplyCardComponent } from './components/reply-card/reply-card.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
@@ -34,7 +35,8 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     NavbarComponent,
     PostComponent,
     LoginComponent,
-    HomePageComponent
+    HomePageComponent,
+    ReplyCardComponent
   ],
   imports: [
     BrowserModule,
