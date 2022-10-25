@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
    
     this.loginService.login(this.registerForm.controls["username"].value, this.registerForm.controls["password"].value).subscribe(
       (account) => {localStorage.setItem("userInfo", JSON.stringify(account))
-    this.router.navigateByUrl("/home")
+    this.router.navigateByUrl("/home").then(() => {window.location.reload()});
     }, 
       (error)=> {console.log("An error has occured"), JSON.stringify(error)}
     )
@@ -42,5 +42,5 @@ export class LoginComponent implements OnInit {
     
 
   }
-  }
+}
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -8,13 +9,15 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
   isDark: boolean = false;
-  
+  loggedIn: boolean = false;
 
-  constructor() { }
+  constructor( private router: Router) { }
 
   ngOnInit(): void {
     this.getThemePref();
-    
+    if (localStorage.getItem("userInfo") != null) {
+      this.loggedIn = true;
+    }
   }
 
   toggleDarkTheme():void{
@@ -35,6 +38,12 @@ export class NavbarComponent implements OnInit {
       document.body.classList.remove('dark-theme');
       this.isDark = false;
     }
+  }
+
+  logout() {
+    localStorage.removeItem("userInfo");
+    this.router.navigateByUrl("/").then(() => {window.location.reload();
+    });
   }
 
 }
