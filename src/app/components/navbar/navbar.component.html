@@ -1,8 +1,9 @@
-<div *ngIf="loggedIn">
+<div *ngIf="this.loginService.loggedIn">
 <div>
 <input id="toggle-menu" type="checkbox" />
 <label for="toggle-menu" class="menu-on">Menu</label>
 <label for="toggle-menu" class="menu-off"></label>
+
 
 <nav>
     <ul>
