@@ -1,6 +1,18 @@
 div{
     width: 100%;
+    margin-top: 5%;
 }
+
+ul{
+    list-style: none;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.margintop{
+    margin-top: 5%;
+}
+
 form{
     width: fit-content;
     margin-left: auto;

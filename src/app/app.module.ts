@@ -22,6 +22,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from "@angular/material/button";
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
+import {MatExpansionModule} from '@angular/material/expansion';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 @NgModule({
@@ -49,10 +50,10 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     MatButtonModule,
     MatInputModule,
     MatIconModule,
+    MatExpansionModule,
+    FormsModule,
     MatSlideToggleModule,
-    ReactiveFormsModule,
-
-    
+    ReactiveFormsModule
 
   ],
   providers: [],
