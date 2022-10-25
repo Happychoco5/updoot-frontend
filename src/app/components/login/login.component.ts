@@ -15,11 +15,13 @@ import { Account } from 'src/app/models/account/account';
 export class LoginComponent implements OnInit {
 
   constructor(private loginService: LoginService, private router: Router, private formBuilder: FormBuilder, private http: HttpClient) { }
+  account_id:number = 0;
   username:string = "";
   password:string = "";
 
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
+    account_id:[this.account_id],
       username:[''],
       password:['']
     });
@@ -32,7 +34,7 @@ export class LoginComponent implements OnInit {
 
   async onSubmit() {
    
-    this.loginService.login(this.registerForm.controls["username"].value, this.registerForm.controls["password"].value).subscribe(
+    this.loginService.login(this.registerForm.controls["account_id"].value,this.registerForm.controls["username"].value,this.registerForm.controls["password"].value).subscribe(
       (account) => {localStorage.setItem("userInfo", JSON.stringify(account))
     this.router.navigateByUrl("/home")
     }, 
