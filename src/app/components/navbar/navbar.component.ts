@@ -15,6 +15,7 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     this.getThemePref();
+    this.getLoginIfTrue();
   }
 
   toggleDarkTheme():void{
@@ -36,9 +37,19 @@ export class NavbarComponent implements OnInit {
       this.isDark = false;
     }
   }
+  getLoginIfTrue(){
+    let loggedInTorF : string | null = localStorage.getItem("loggedIn");
+    if (loggedInTorF === 'true')
+    {
+      this.loginService.loggedIn = true;
+    }else{
+      this.loginService.loggedIn = false;
+    }
+  }
 
   logout() {
     localStorage.removeItem("userInfo");
+    localStorage.setItem("loggedIn", "false");
     this.loginService.loggedIn = false;
     this.router.navigateByUrl("/");
   }
