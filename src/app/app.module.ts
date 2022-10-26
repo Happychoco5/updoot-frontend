@@ -27,6 +27,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { UserPostsComponent } from './components/user-posts/user-posts.component';
 import { TruncatePipe } from './pipes/truncate.pipe';
+import { ViewPostComponent } from './components/view-post/view-post.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { TruncatePipe } from './pipes/truncate.pipe';
     HomePageComponent,
     ReplyCardComponent,
     UserPostsComponent,
-    TruncatePipe
+    TruncatePipe,
+    ViewPostComponent
   ],
   imports: [
     BrowserModule,

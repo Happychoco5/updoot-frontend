@@ -21,6 +21,7 @@ export class ReplyComponent implements OnInit {
   ngOnInit(): void {
     // this.createReplyForPost();
     // this.getRepliesByPost();
+    console.log(this.postId);
     this.getRepliesByPost(this.postId);
   }
   

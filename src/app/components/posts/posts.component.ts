@@ -5,6 +5,7 @@ import { PostService } from 'src/app/services/post/post.service';
 
 
 import { Thread } from 'src/app/models/thread/thread';
+import { Router } from '@angular/router';
 
 
 
@@ -15,7 +16,7 @@ import { Thread } from 'src/app/models/thread/thread';
 })
 export class PostsComponent implements OnInit {
 
-  constructor(private postService: PostService) { }
+  constructor(private postService: PostService, private router:Router) { }
 
   threads: Thread[] = [];
   
@@ -37,6 +38,8 @@ export class PostsComponent implements OnInit {
   {
 
   }
-
+  viewReplies(threadId:number){
+    this.router.navigateByUrl(`/post/${threadId}`);
+  }
 
 }
