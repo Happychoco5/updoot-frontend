@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from 'src/app/services/post/post.service';
-
+import { UpdootService } from 'src/app/services/updoot/updoot.service';
 
 
 
@@ -41,5 +41,4 @@ export class PostsComponent implements OnInit {
   viewReplies(threadId:number){
     this.router.navigateByUrl(`/post/${threadId}`);
   }
-
 }
