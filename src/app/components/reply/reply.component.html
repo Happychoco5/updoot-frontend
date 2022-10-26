@@ -1,1 +1,10 @@
-<p>reply works!</p>
+
+<div>
+    <textarea [(ngModel)]="replyContent">
+
+    </textarea>
+    <button (click)="createReplyForPost()">Add Comment</button>
+</div>
+<div *ngFor="let reply of replies">
+    <app-reply-card [reply] = "reply"></app-reply-card>
+</div>

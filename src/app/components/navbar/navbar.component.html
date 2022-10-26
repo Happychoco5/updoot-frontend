@@ -1,1 +1,21 @@
-<p>navbar works!</p>
+<div *ngIf="this.loginService.loggedIn">
+<div>
+<input id="toggle-menu" type="checkbox" />
+<label for="toggle-menu" class="menu-on">Menu</label>
+<label for="toggle-menu" class="menu-off"></label>
+
+
+<nav>
+    <ul>
+        <li><a mat-button [routerLink]="['/home']">Home</a></li>
+        <li><a mat-button [routerLink]="['/create-posts']">Create Post</a></li>
+        <li><a mat-button [routerLink]="['/user-posts']">My Posts</a></li>
+        <li><a mat-button (click)="logout()">Log Out</a></li>
+        <!-- <li><a mat-button [routerLink]="['']"></a></li>
+        <li><a mat-button [routerLink]="['']"></a></li> -->
+    </ul>
+    <mat-slide-toggle [(ngModel)]="isDark" (toggleChange)="toggleDarkTheme()">Dark Mode</mat-slide-toggle>
+</nav>
+</div>
+
+</div>
