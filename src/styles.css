@@ -3,12 +3,13 @@
     margin: auto;
     color: rgb(244, 52, 52);
     text-align: center;
-    font-weight: 800;
+    font-weight: 300;
     font-size: 15px;
     border: 15px;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     letter-spacing: 2px;
     align-items: center;
+    background-color: blueviolet;
 }
 input{
     color:rgb(192, 212, 215);
@@ -23,7 +24,7 @@ input{
 label {
     margin-right: 10px;
     font-size: 20px;
-    font-weight: 600;    
+    font-weight: 300;    
     color: rgb(244, 52, 52);
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
