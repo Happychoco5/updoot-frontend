@@ -27,7 +27,7 @@ export class CreatePostsComponent implements OnInit {
   
   async onSubmit(){
     const thread: Thread = {threadId: 0,
-      accountId:this.registerForm.controls['account_id'].value,
+      accountId:JSON.parse(localStorage.getItem("userInfo")!)["accountId"],
       title:this.registerForm.controls['title'].value,
       content:this.registerForm.controls['content'].value,
       epoch:Date.now()/1000,

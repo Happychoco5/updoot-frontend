@@ -7,7 +7,6 @@ import { PostsComponent } from './components/posts/posts.component';
 import { CreatePostsComponent } from './components/create-posts/create-posts.component';
 import { ReplyComponent } from './components/reply/reply.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { PostComponent } from './components/post/post.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -27,6 +26,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { UserPostsComponent } from './components/user-posts/user-posts.component';
 import { TruncatePipe } from './pipes/truncate.pipe';
+import { PostsCardComponent } from './components/posts-card/posts-card.component';
 
 @NgModule({
   declarations: [
@@ -35,12 +35,12 @@ import { TruncatePipe } from './pipes/truncate.pipe';
     CreatePostsComponent,
     ReplyComponent,
     NavbarComponent,
-    PostComponent,
     LoginComponent,
     HomePageComponent,
     ReplyCardComponent,
     UserPostsComponent,
-    TruncatePipe
+    TruncatePipe,
+    PostsCardComponent
   ],
   imports: [
     BrowserModule,
