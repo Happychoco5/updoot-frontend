@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
   constructor(private loginService: LoginService, private router: Router, private formBuilder: FormBuilder, private http: HttpClient) { }
   username:string = "";
   password:string = "";
+  loggedIn: boolean = false;
 
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
@@ -34,7 +35,8 @@ export class LoginComponent implements OnInit {
    
     this.loginService.login(this.registerForm.controls["username"].value, this.registerForm.controls["password"].value).subscribe(
       (account) => {localStorage.setItem("userInfo", JSON.stringify(account))
-    this.loginService.loggedIn = true;
+    this.loggedIn = true;
+    localStorage.setItem("loggedIn", this.loggedIn.toString());
     this.router.navigateByUrl("/home");
     }, 
       (error)=> {console.log("An error has occured"), JSON.stringify(error)}
