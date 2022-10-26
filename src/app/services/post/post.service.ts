@@ -20,7 +20,7 @@ export class PostService {
 
 
   public getSingleThread(id: number): Observable<Thread> {
-    return this.http.get<Thread>(environment.baseUrl + this.threadUrl+ `/${id}`, { headers: environment.headers});
+    return this.http.get<Thread>(environment.baseUrl + this.threadUrl+ `/single/${id}`, { headers: environment.headers});
   }
 
   

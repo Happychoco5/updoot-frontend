@@ -26,6 +26,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { UserPostsComponent } from './components/user-posts/user-posts.component';
 import { TruncatePipe } from './pipes/truncate.pipe';
+import { ViewPostComponent } from './components/view-post/view-post.component';
 import { PostsCardComponent } from './components/posts-card/posts-card.component';
 
 @NgModule({
@@ -40,6 +41,7 @@ import { PostsCardComponent } from './components/posts-card/posts-card.component
     ReplyCardComponent,
     UserPostsComponent,
     TruncatePipe,
+    ViewPostComponent,
     PostsCardComponent
   ],
   imports: [
