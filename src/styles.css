@@ -11,11 +11,14 @@
     align-items: center;
 }
 input{
-    color:seagreen;
-    background-color: rgba(90, 64, 219, 0.872);
+    color:rgb(192, 212, 215);
+    background-color: rgba(64, 154, 219, 0.872);
     font-weight: 600;
     align-items: center;
-    padding:5px;
+    padding:10px;
+    margin-bottom: 10px;
+    font-size:20px;
+    width:500px;
 }
 label {
     margin-right: 10px;
@@ -25,11 +28,11 @@ label {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 form {
-    margin: auto;
+    margin-top:400px;
     text-align: center;
     border: 2px;
     font-size: 20px;
     font-weight: 600;
-    background-color: rgba(255, 255, 255, 0.413);
+    background-color: rgb(23, 33, 73);
     letter-spacing: 2px;
 }
