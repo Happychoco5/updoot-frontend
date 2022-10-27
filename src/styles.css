@@ -33,3 +33,6 @@ button{
     color: var(--btn-txt-color);
 
 }
+ul{
+    padding: 0;
+}
