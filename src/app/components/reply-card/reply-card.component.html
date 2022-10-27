@@ -1,2 +1,15 @@
-<p>content: {{reply.content}} updoot: {{reply.updoot}} date: {{ reply.epoch * 1000 | date:'medium' }}</p>
-<button [disabled]="updooted"  (click)="updootReply(reply)">Updoot</button>
+<!-- <p>content: {{reply.content}}<br> updoot: {{reply.updoot}}<br> date: {{ reply.epoch * 1000 | date:'medium' }}</p>
+<button [disabled]="updooted"  (click)="updootReply(reply)">Updoot</button> -->
+
+<div class="post-card">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-subtitle>Date: {{reply.epoch*1000 | date : 'short'}}</mat-card-subtitle>
+        </mat-card-header>
+            <mat-card-content>
+                    <p>{{reply.content}}</p>
+                    <footer> {{reply.updoot}}<br><button [disabled]="updooted"  (click)="updootReply(reply)">Updoot</button></footer>
+            </mat-card-content>
+    </mat-card>
+
+</div>
