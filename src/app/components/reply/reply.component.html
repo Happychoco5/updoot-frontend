@@ -1,10 +1,28 @@
-
+<div class="wrapper">
+    <div class="content">
 <div>
-    <textarea [(ngModel)]="replyContent">
+    <ul>
+        <li>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Comment</mat-label>
+                <textarea matInput [(ngModel)]="replyContent" placeholder="Comment"></textarea>
+              </mat-form-field>
+        </li>
+        <li>
+            <button mat-button (click)="createReplyForPost()">Add Comment</button>
+        </li>
+    </ul>
 
-    </textarea>
-    <button (click)="createReplyForPost()">Add Comment</button>
+    <!-- <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Comment</mat-label>
+        <textarea matInput [(ngModel)]="replyContent" placeholder="Comment"></textarea>
+      </mat-form-field>
+     <textarea [(ngModel)]="replyContent"></textarea> 
+    
+    <button mat-button (click)="createReplyForPost()">Add Comment</button> -->
 </div>
-<div *ngFor="let reply of replies">
+<div class="post-card" *ngFor="let reply of replies">
     <app-reply-card [reply] = "reply"></app-reply-card>
+</div>
+</div>
 </div>

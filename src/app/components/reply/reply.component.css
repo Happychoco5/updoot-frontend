@@ -1,0 +1,45 @@
+.wrapper{
+    width: 100%;
+}
+.content{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul{
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+mat-form-field{
+    width: 100%;
+}
+button{
+    background-color: var(--card-bkg-color);
+    color: var(--text-color);
+}
+
+
+@supports (display: grid){
+    .post-card{
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns: repeat(1, max(250px, 250px));
+        column-gap: 60px;
+        row-gap: 50px;
+    }
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+    background: var(--card-bkg-color);
+    color: var(--text-color);
+}
+::placeholder, mat-label{
+    color: var(--text-color);
+}

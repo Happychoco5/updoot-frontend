@@ -1,3 +1,4 @@
+<!-- <div>
 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     <label for="username"> Username:</label>
     <input name="username" type="text" formControlName="username">
@@ -6,4 +7,25 @@
     </label><input name="password" type="password" formControlName="password">
    <br> <button class="btnForm" id="submit">Login</button>
 </form>
+</div> -->
 
+<div [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <ul>
+        <li>
+            <mat-form-field appearance="fill">
+                <mat-label for="username"> Username</mat-label>
+                <input matInput name="username" type="text" formControlName="username">
+            </mat-form-field>
+        </li>
+        <li>
+            <mat-form-field appearance="fill">
+                <mat-label name="password">Password</mat-label>
+                <input matInput name="password" type="password" formControlName="password">
+            </mat-form-field>
+        </li>
+        <li>
+            <button mat-button (click)="onSubmit()">Login</button>
+        </li>
+    </ul>
+
+</div>
