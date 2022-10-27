@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
 import { Thread } from 'src/app/models/thread/thread';
 import { UpdootedThread } from 'src/app/models/updooted/updooted-thread';
+import { PostService } from 'src/app/services/post/post.service';
 import { UpdootService } from 'src/app/services/updoot/updoot.service';
 
 @Component({
@@ -10,11 +12,29 @@ import { UpdootService } from 'src/app/services/updoot/updoot.service';
 })
 export class PostsCardComponent implements OnInit {
 
-  @Input() thread!:Thread;
+  @Input() thread:Thread = new Thread(0, 0, '', '', 0, 0);
+  @Input() threadId:number = 0;
   updooted: boolean = true;
-  constructor(private updootService:UpdootService) { }
+  constructor(private updootService:UpdootService, private postService:PostService, private router:Router) { }
 
   ngOnInit(): void {
+    if(this.threadId != 0){
+      this.postService.getSingleThread(this.threadId).subscribe({
+        next:(thread) => {
+          this.thread = thread;
+          console.log(thread);
+          this.getUpdootedThread();
+        },
+        error: (error) => {
+          console.log(error);
+        }
+      });
+    } else{
+      this.getUpdootedThread();
+    }
+  }
+
+  getUpdootedThread(){
     this.updootService
     .getUpdootedThread(this.thread.accountId, this.thread.threadId)
     .subscribe({
@@ -48,6 +68,9 @@ export class PostsCardComponent implements OnInit {
         this.updooted = false;
       }
     });
+  }
+  viewReplies(threadId:number){
+    this.router.navigateByUrl(`/post/${threadId}`);
   }
 
 }

@@ -25,20 +25,19 @@ export class PostsComponent implements OnInit {
   }
 
   getThreads(){
-    this.postService.getThreads().subscribe(
-      (res) =>{
-        this.threads = res;
+    this.postService.getThreads().subscribe({
+      next:(res) =>{
+        this.threads = res.sort((thred1, thred2) => {
+          return thred2.epoch - thred1.epoch;
+        });
       },
-      (err) => {
+      error:(err) => {
         console.log(err)
       }
-    );
+    });
   }
   showPosts()
   {
 
-  }
-  viewReplies(threadId:number){
-    this.router.navigateByUrl(`/post/${threadId}`);
   }
 }

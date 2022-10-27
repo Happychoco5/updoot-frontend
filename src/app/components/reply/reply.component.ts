@@ -29,7 +29,9 @@ export class ReplyComponent implements OnInit {
     this.replyService.getRepliesForPost(postId).subscribe(
       {
         next: (replies) => {
-        this.replies = replies;
+        this.replies = replies.sort((reply1, reply2)=> {
+          return reply2.epoch - reply1.epoch
+        });
         },
         error: (err) => {
         console.log(err)
