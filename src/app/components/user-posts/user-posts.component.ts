@@ -14,7 +14,7 @@ import { UpdootService } from 'src/app/services/updoot/updoot.service';
 })
 export class UserPostsComponent implements OnInit {
 
-  constructor(private postService: PostService, private updootService: UpdootService, private router: Router) { }
+  constructor(private postService: PostService, private router: Router) { }
   threads: Thread[] = [];
   user: string = '';
 
