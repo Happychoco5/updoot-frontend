@@ -3,7 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Account } from 'src/app/models/account/account';
 import { Thread } from 'src/app/models/thread/thread';
+import { UpdootedThread } from 'src/app/models/updooted/updooted-thread';
 import { PostService } from 'src/app/services/post/post.service';
+import { UpdootService } from 'src/app/services/updoot/updoot.service';
 
 @Component({
   selector: 'app-user-posts',
@@ -15,6 +17,7 @@ export class UserPostsComponent implements OnInit {
   constructor(private postService: PostService, private router: Router) { }
   threads: Thread[] = [];
   user: string = '';
+
   ngOnInit(): void {
     let storedUser: string | null = localStorage.getItem("userInfo");
 
@@ -29,6 +32,10 @@ export class UserPostsComponent implements OnInit {
       error: (e) => console.error(e),
       complete: () => console.info('complete')
     })
+  }
+
+  viewReplies(threadId:number){
+    this.router.navigateByUrl(`/post/${threadId}`);
   }
 
   navigateToThread(thread: Thread) {
