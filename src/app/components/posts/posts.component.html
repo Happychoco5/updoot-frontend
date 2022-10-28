@@ -1,17 +1,7 @@
 
 <div class="post-card">
 <mat-card *ngFor="let p of threads">
-    <mat-card-header>
-        <mat-card-title>{{p.title}}</mat-card-title>
-        <mat-card-subtitle>Date: {{p.epoch*1000 | date : 'short'}}</mat-card-subtitle>
-    </mat-card-header>
-        <mat-card-content>
-                <p>{{p.content}}</p>
-                <footer> {{p.updoot}}<button (click)="viewReplies(p.threadId)">View Replies</button></footer>
-        </mat-card-content>
-        <mat-card-footer> 
+     <app-posts-card [thread] = "p"></app-posts-card>
 
-        <app-posts-card [thread] = "p"></app-posts-card>
-        </mat-card-footer>
 </mat-card>
 </div>

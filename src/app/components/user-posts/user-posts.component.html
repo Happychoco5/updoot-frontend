@@ -9,7 +9,7 @@
     <h2 class="center">{{this.user}}'s posts</h2>
     <div class="post-card">
         <mat-card *ngFor="let p of threads" (click)="navigateToThread(p)">
-            <mat-card-header>
+            <!-- <mat-card-header>
                 <mat-card-title>{{p.title}}</mat-card-title>
                 <mat-card-subtitle>{{p.epoch * 1000 | date: 'short'}}</mat-card-subtitle>
             </mat-card-header>
@@ -17,10 +17,10 @@
                 <p>{{p.content | truncate: 50}}</p>
                 <footer> {{p.updoot}}</footer>
             </mat-card-content>
-            <mat-card-footer>
+            <mat-card-footer> -->
                 <app-posts-card [thread] = "p"></app-posts-card>
-                <button (click)="viewReplies(p.threadId)">View Replies</button>
-            </mat-card-footer>
+                <!-- <button (click)="viewReplies(p.threadId)">View Replies</button>
+            </mat-card-footer> -->
         </mat-card>
     </div>
 </ng-template>
