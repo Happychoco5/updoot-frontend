@@ -1,0 +1,11 @@
+.wrapper {
+    width: 100%;
+}
+
+.content {
+    width:  fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid;
+    padding: 3%;
+}

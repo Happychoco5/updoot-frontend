@@ -1,0 +1,8 @@
+.replyButton {
+    background-color: grey;
+    margin-left: 2%;
+}
+
+mat-card-subtitle{
+    color: var(--text-color);
+}

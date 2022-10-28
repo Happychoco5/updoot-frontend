@@ -8,8 +8,11 @@
         </mat-card-header>
             <mat-card-content>
                     <p>{{reply.content}}</p>
-                    <footer> {{reply.updoot}}<br><button [disabled]="updooted"  (click)="updootReply(reply)">Updoot</button></footer>
+                    <footer> {{reply.updoot}}<br></footer>
             </mat-card-content>
+            <button [disabled]="updooted"  (click)="updootReply(reply)" mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+                <mat-icon>favorite</mat-icon>
+              </button>
     </mat-card>
 
 </div>
